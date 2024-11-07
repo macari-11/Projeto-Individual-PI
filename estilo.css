@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+}
+
+header{
+    background-color:black ;
+    height: 7vh;
+    /* position: sticky;
+    top: 0; */
+}
+
+.menu{
+    color: white;
+}
+
+#primeiraParte{
+    background-image: url(imagensNaruto/fundoKonoha2.jpg) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#carrossel{
+    background-color: blue;
+    display: flex;
+    height: 60vh;
+    width: 130vh;
+}
+#embaixoCarrosel{
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 130vh;
+}
+
+#textoComeco{
+    background-color: blueviolet;
+    height: 50vh;
+    width: 80vh;
+
+}
+
+
+
+
+
+
+
+
+
+
+#segundaParte{
+    background-color:aqua ;
+    height: 100vh;
+}
+#terceiraParte{
+    background-color: blueviolet;
+    height: 110vh;
+}
+#quartaParte{
+    background-color: wheat;
+    height: 100vh;
+}
+
+footer{
+    background-color: brown;
+    height: 15vh;
+}
