@@ -65,9 +65,6 @@ header{
     background-image: url(imagensNaruto/home1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    
-    
-    
 }
 
 #segundaImagem{
@@ -78,46 +75,104 @@ header{
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#terceiraParte{
-    background-color: #272525;
-    height: 110vh;
-}
-#quartaParte{
-    background-color: #D9D9D9;
-    height: 100vh;
-}
-#quintaParte{
+.sessaoPersonagem{
     background-color: #272525;
     height: 100vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
 }
-#sextaParte{
-    background-color: #D9D9D9;
+.esquerdaPersonagem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 90vh;
+    margin: 5vh 5vh 5vh 5vh;
+}
+
+.textoPersonagem{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    font-size: 5vh;
+    color: white
+}
+.iconesPersonagem{
+    width: 100%;
+    height: 50%;
+    /* background-color:blue; */
+}
+
+.direitaPersonagem{
+    width: 50%;
+    height: 90vh;
+    margin: 5vh 5vh 5vh 5vh;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.fotosDireita{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    height: 90vh;
+    background-image: url(imagensNaruto/narutoPagina.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.nomeDireita{
+    width: 35%;
+    height: 90vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nomePortugues{
+    display: flex;
+    align-self: flex-end;
+    height: 50%;
+    width: 50%;
+    font-size: 5vh;
+    margin-right: 4%; 
+    color: white;
+    text-align: right;
+}
+
+.nomeJapones{
+    display: flex;
+    align-self: flex-end;
+    writing-mode: vertical-rl;      
+    text-orientation: mixed;           /* muda o jeito de escrever  */
+    letter-spacing: 10px;           /* espaço entre as letras  */
+    height: 50%;
+    width: 50%;
+    font-size: 4.5vh;
+    margin-right: 2%;
+    color: white;
+}
+
+.sessaoPersonagemInverso{
+    background-color: #ffffff;
     height: 100vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
 }
-#setimaParte{
-    background-color: #272525;
-    height: 100vh;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 footer{
