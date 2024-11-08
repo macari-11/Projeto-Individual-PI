@@ -19,71 +19,107 @@ header{
 }
 
 #primeiraParte{
-    background-image: url(imagensNaruto/fundoKonoha2.jpg) ;
+    background-image: url(imagensNaruto/principalHome.jpg) ;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
-#carrossel{
-    background-color: blue;
-    display: flex;
-    height: 60vh;
-    width: 130vh;
-}
-#embaixoCarrosel{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 60vh;
-    width: 130vh;
-}
-
-#textoComeco{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: blueviolet;
-    height: 50%;
-    width: 50%;
-
-}
-#imagemComeco{
-    background-image: url(imagensNaruto/imagemComeco.jpg);
-    background-size: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
-    width: 50%;
-
-}
-
-
-
-
-
-
-
-
-
-
 #segundaParte{
-    background-color:aqua ;
+    background-color: #D9D9D9;;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#textoSegundaParte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 180vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    font-size: 4vh;
+}
+#imagensSegundaParte{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 100vh;
+    width: 180vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+#primeiraImagem{
+    width: 69%;
+    height: 100%;
+    background-image: url(imagensNaruto/home1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
+    
+}
+
+#segundaImagem{
+    width:29%;
+    height: 100%;
+    background-image: url(imagensNaruto/home2.jpg);
+    background-size: contain;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #terceiraParte{
-    background-color: blueviolet;
+    background-color: #272525;
     height: 110vh;
 }
 #quartaParte{
-    background-color: wheat;
+    background-color: #D9D9D9;
+    height: 100vh;
+}
+#quintaParte{
+    background-color: #272525;
+    height: 100vh;
+}
+#sextaParte{
+    background-color: #D9D9D9;
+    height: 100vh;
+}
+#setimaParte{
+    background-color: #272525;
     height: 100vh;
 }
 
+
 footer{
-    background-color: brown;
+    background-color: black;
     height: 15vh;
 }
