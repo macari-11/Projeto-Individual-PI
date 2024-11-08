@@ -8,7 +8,7 @@ header{
     display: flex;
     align-items: center;
     justify-content:space-around;
-    background-color:black ;
+    background-color:rgb(110, 57, 57) ;
     height: 7vh;
     position: sticky;
     top: 0;
