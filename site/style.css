@@ -327,12 +327,80 @@ body{
 
 
 
+              /* PARTE DA ONU */
+
+#telaOnu{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh;
+    background-color: #FFC74F;
+}
+#textoOnu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 10%;
+    width: 50%;
+    font-size: 5vh;
+}
+#topicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    width: 100%;
+}
+.TOPICOS{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 60%;
+    width: 80%;
+}
+.topico{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width:40%;
+    background-color: azure;
+    border-radius: 30px;
+}
+
+.OnuTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 7%;
+    width: 90%;
+    font-size: 4vh;
+}
+.OnuImagem{
+    height: 50%;
+    width: 90%;
+    background-image: url(imagensNaruto/home2.jpg);
+    background-size: cover;
+    border-radius: 30px;
+}
+.OnuTexto{
+    display: flex;
+    justify-content: center;
+    height: 35%;
+    width: 90%;
+    font-size: 2.8vh;
+}
 
 
 
 
-
-
+#topicosBaixo{
+    height: 60%;
+    width: 80%;
+}
 
 
 
