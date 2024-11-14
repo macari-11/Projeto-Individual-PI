@@ -443,12 +443,51 @@ body{
     border-radius: 30px;
 }
 #sobrePreferido{
-    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 95vh;
     width: 100%;
     background-color: #FFC74F;
 }
+#preferidoEsquerda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 45%;
+}
+.TitulosSobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    font-size: 250%;
+}
+#textoEsquerda{
+    display: flex;
+    align-items: center;
+    height: 70%;
+    width: 50%;
+    font-size: 160%;
+}
 
-
+#preferidoDireita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 55%;
+}
+#caixaImagens{
+    height: 70%;
+    width: 100%;
+    background-color: aqua;
+}
 
 footer{
     background-color: black;
