@@ -1,12 +1,7 @@
-*{margin: 0;
-padding: 0;
-}
-
-
 body{
     margin: 0;
     padding: 0;
-    height: 200vh;
+    height: 500vh;
 }
 
 #segundaParte{
@@ -394,17 +389,64 @@ body{
     font-size: 2.8vh;
 }
 
+                /* SOBRE MIM */
 
-
-
-#topicosBaixo{
-    height: 60%;
-    width: 80%;
+.sobreMim{
+    display: flex;
+    flex-direction: column;
+    height: 140vh;
+    width: 100%;
+    display: flex;
+    background-color: #272525;
 }
 
-
-
-
+#sobreTitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7%;
+    width: 100%;
+    font-size: 5vh;
+    font-style: bold;
+    color: white;
+}
+#sobreInformações{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+}
+.sobre{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:space-around;
+    height: 50%;
+    width: 100%;
+}
+#sobreTexto{
+    display: flex;
+    align-items: center;
+    
+    height: 100%;
+    width: 50%;
+    font-size: 4vh;
+    background-color: #949494;
+    border-radius: 30px;
+}
+#sobreImagem{
+    background-image: url(imagensNaruto/home2.jpg);
+    background-size: cover;
+    height: 85%;
+    width: 30%;
+    background-color: #949494;
+    border-radius: 30px;
+}
+#sobrePreferido{
+    height: 100vh;
+    width: 100%;
+    background-color: #FFC74F;
+}
 
 
 
