@@ -364,7 +364,7 @@ header a{
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 200vh;
+    height: 2000px;
     background-color: #FFC74F;
 }
 #textoOnu{
@@ -430,7 +430,7 @@ header a{
 .sobreMim{
     display: flex;
     flex-direction: column;
-    height: 140vh;
+    height: 1600px;
     width: 100%;
     display: flex;
     background-color: #272525;
@@ -457,13 +457,12 @@ header a{
     align-items: center;
     flex-direction: row;
     justify-content:space-around;
-    height: 50%;
+    height: 725px;
     width: 100%;
 }
 #sobreTexto{
     display: flex;
     align-items: center;
-    
     height: 100%;
     width: 50%;
     font-size: 4vh;
@@ -482,8 +481,8 @@ header a{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    height: 95vh;
+    justify-content: space-between;
+    height: 910px;
     width: 100%;
     background-color: #FFC74F;
 }
@@ -491,15 +490,15 @@ header a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-between;
+    height: 728px;
     width: 45%;
 }
 .TitulosSobre{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30%;
+    height: 20%;
     width: 100%;
     font-size: 250%;
 }
@@ -515,16 +514,109 @@ header a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100%;
     width: 55%;
 }
 #caixaImagens{
-    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 728px;
     width: 100%;
-    background-color: aqua;
 }
 
+.minato{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33%;
+}
+.MinatoPortugues{
+    display: flex;
+    align-items: flex-end;
+    height: 10%;
+    width: 70%;
+    font-weight: bold;
+    font-size: xx-large;
+}
+.fotoMinato{
+    height: 79%;
+    width: 100%;
+    background-image: url(imagensNaruto/eea349d7cdc3419fb9fb6f18d3086d0e.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.minatoJapones{
+    display: flex;
+    align-items: flex-start;
+    height: 10%;
+    width: 100%;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.episodiosPreferidos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 850px;
+    width: 100%;
+    background-color: #272525;
+}
+.Episodios{
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+}
+#tituloEP{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 250%;
+    color: white;
+}
+.Episodio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.nomeEP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 190%;
+    font-weight: bold;
+    height: 10%;
+    width: 50%;
+    color: white;
+
+}
+.fotoEP{
+    height: 40%;
+    width: 70%;
+    background-image: url(imagensNaruto/home2.jpg);
+}
+.descEP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 60%;
+    font-size: 150%;
+    color: white;
+}
+
+            /* FOOTER */
 footer{
     display: flex;
     flex-direction: row;
