@@ -25,9 +25,9 @@
 
             <div class="SlideCima">
                <input type="radio" name="slide" id="login" checked>
-               <input type="radio" name="slide" id="signup">
+               <input type="radio" name="slide" id="cadastro">
                <label for="login" class="slide login">Login</label>
-               <label for="signup" class="slide signup">Cadastro</label>
+               <label for="cadastro" class="slide cadastro">Cadastro</label>
                <div class="slider-tab"></div>
             </div>
 
@@ -47,7 +47,7 @@
                      <input type="submit" value="Login">
                   </div>
 
-                  <div class="signup-link">
+                  <div class="LinkCadastro">
                      Não é um ninja? <a href="">Cadastre-se agora pô</a>
                   </div>
 
@@ -55,7 +55,7 @@
 
 
 
-               <form action="#" class="signup">
+               <form action="#" class="cadastro">
 
                   <div class="inputDados">
                      <input type="text" placeholder="Seu E-mail ninja" required>
@@ -84,29 +84,24 @@
       </div>
       <script>
 
-         const loginText = document.querySelector(".title-text .login")
-         const loginForm = document.querySelector("form.login")
-         const loginBtn = document.querySelector("label.login")
-         const signupBtn = document.querySelector("label.signup")
-         const signupLink = document.querySelector("form .signup-link a")
+         const textoLogin = document.querySelector("login")
+         const parteDeBaixo = document.querySelector("form.login")
+         const botaoLogin = document.querySelector("label.login")
+         const botaoCadastro = document.querySelector("label.cadastro")
+         const linkCadastro = document.querySelector("form .LinkCadastro a")
 
-         signupBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "-50%"
-           loginText.style.marginLeft = "-50%"
+         botaoCadastro.onclick = (()=>{
+           parteDeBaixo.style.marginLeft = "-50%"
+           textoLogin.style.marginLeft = "-50%"
          })
-         loginBtn.onclick = (()=>{
-           loginForm.style.marginLeft = "0%"
-           loginText.style.marginLeft = "0%"
+         botaoLogin.onclick = (()=>{
+           parteDeBaixo.style.marginLeft = "0%"
+           textoLogin.style.marginLeft = "0%"
          })
-         signupLink.onclick = (()=>{
-           signupBtn.click()
+         linkCadastro.onclick = (()=>{
+           botaoCadastro.click()
            return false
          })
-
-
-
-
-         
       </script>
    </body>
 </html>
