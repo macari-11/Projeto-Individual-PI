@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="stylehome2.css">
+      
+</head>
+
+<body>
+
+
+      <div class="CaixaLoginCadastro">
+
+          
+          <div class="TextoTitulo">
+             <div class="dattebayo">
+                 DATTEBAYO
+             </div>
+          </div>
+
+         <div class="EspaçoLoginCadastro">
+
+            <div class="SlideCima">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Cadastro</label>
+               <div class="slider-tab"></div>
+            </div>
+
+            <div class="SlideBaixo">
+               <form action="#" class="login">   <!-- Ver o que faz -->
+
+                  <div class="inputDados">
+                     <input type="text" placeholder="Seu E-mail ninja" required>
+                  </div>
+
+                  <div class="inputDados">
+                     <input type="password" placeholder="Aquela Palavrinha Secreta" required>
+                  </div>
+                  
+                  <div class="inputDados btn">
+                     <div class="divBotao"></div>
+                     <input type="submit" value="Login">
+                  </div>
+
+                  <div class="signup-link">
+                     Não é um ninja? <a href="">Cadastre-se agora pô</a>
+                  </div>
+
+               </form>
+
+
+
+               <form action="#" class="signup">
+
+                  <div class="inputDados">
+                     <input type="text" placeholder="Seu E-mail ninja" required>
+                  </div>
+
+                  <div class="inputDados">
+                     <input type="password" placeholder="Senha" required>
+                  </div>
+
+                  <div class="inputDados">
+                     <input type="password" placeholder="Confirme sua Senha" required>
+                  </div>
+
+                  <div class="inputDados btn">
+                     <div class="divBotao"></div>
+                     <input type="submit" value="Realizar Cadastro">
+                  </div>
+
+               </form>
+
+
+            </div>
+
+            
+         </div>
+      </div>
+      <script>
+
+         const loginText = document.querySelector(".title-text .login")
+         const loginForm = document.querySelector("form.login")
+         const loginBtn = document.querySelector("label.login")
+         const signupBtn = document.querySelector("label.signup")
+         const signupLink = document.querySelector("form .signup-link a")
+
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%"
+           loginText.style.marginLeft = "-50%"
+         })
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%"
+           loginText.style.marginLeft = "0%"
+         })
+         signupLink.onclick = (()=>{
+           signupBtn.click()
+           return false
+         })
+
+
+
+
+         
+      </script>
+   </body>
+</html>
