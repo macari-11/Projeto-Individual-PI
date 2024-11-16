@@ -18,6 +18,11 @@ header a{
     font-size: x-large;
 }
 
+/* ::selection{
+    background: #FF7A03;
+    color: #fff;
+  } */
+
 .div_header{
     display: flex;
     align-items: center;
@@ -541,10 +546,24 @@ header a{
     font-weight: bold;
     font-size: xx-large;
 }
-.fotoMinato{
+.fotoMinato1{
     height: 79%;
-    width: 100%;
-    background-image: url(imagensNaruto/eea349d7cdc3419fb9fb6f18d3086d0e.jpg);
+    width: 252px;
+    background-image: url(imagensNaruto/minato1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.fotoMinato2{
+    height: 79%;
+    width: 252px;
+    background-image: url(imagensNaruto/minato2.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.fotoMinato3{
+    height: 79%;
+    width: 252px;
+    background-image: url(imagensNaruto/minato3.jpg);
     background-size:contain;
     background-repeat: no-repeat;
 }

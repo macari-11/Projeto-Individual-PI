@@ -113,10 +113,6 @@ html,body{
   place-items: center;
   background-color: #272525;
 }
-::selection{
-  background: #FF7A03;
-  color: #fff;
-}
 .CaixaLoginCadastro{
   overflow: hidden;
   max-width: 390px;
