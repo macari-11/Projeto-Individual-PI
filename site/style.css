@@ -13,9 +13,14 @@ header{
     background-color: rgba(255, 199, 79);
 }
 header a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: x-large;
+    width: 100%;
+    height: 100%;
 }
 
 /* ::selection{
@@ -29,54 +34,174 @@ header a{
     justify-content: center ;
     width: 9%;
     height: 50%;
-    background-color: #949494;
-    border-radius: 35px;
+    background: -webkit-linear-gradient(right, #FF7A03, #FFC74F);
+    border-radius: 5px;
+}
+
+#baixo a{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 5%;
+    background: -webkit-linear-gradient(right, #FF7A03, #FFC74F);
+    border-radius: 5px;
+}
+        /* HISTORIA */
+.TelaGeralHistoria{
+    display: flex;
+    flex-direction: column;
 }
 #segundaParte{
     background-color: #FFC74F;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+#tituloSobreOanime{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 8vh;
+    width: 40vh;
+    font-weight: bold;
+    font-size: 200%;
+}
 #textoSegundaParte{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    height: 100vh;
-    width: 180vh;
+    height: 55vh;
+    width: 150vh;
     margin-bottom: 1vh;
     margin-top: 1vh;
     font-size: 4vh;
 }
-#imagensSegundaParte{
+.partesHistoria{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80vh;
+    background-color: #949494;
+}
+.partesHistoriaEsquerda{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#TituloHistoriaEsquerda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    font-weight: bold;
+    font-size:xx-large;
+}
+.ImagemHistoriaEsquerda{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 85%;
+}
+#ImagemHistoriaEsquerda{
+    width:75%;
+    height: 85%;
+    background-image: url(imagensNaruto/home2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.partesHistoriaDireita{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.partesHistoriaDireita span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 65%;
+    font-size: x-large;
+}
+.partesHistoria2{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 80vh;
+    background-color:#272525;
+}
+
+.parteAntagonistas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    
+}
+.parteAntagonistas span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30%;
+    height: 9%;
+    font-size: xx-large;
+}
+.Antagonistas{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: 90%;
+}
+#antagonistaClassico{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: #FFC74F;
+}
+.tituloAntagonista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+.fotosAntagonistas{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    height: 100vh;
-    width: 180vh;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
+    width: 100%;
+    height: 90%;
+}
+.fotosAntagonistas img{
+    width:20%;
+    height: 90%;
 }
 
-#primeiraImagem{
-    width: 69%;
+
+
+
+#antagonistaShippuden{
+    width: 50%;
     height: 100%;
-    background-image: url(imagens/);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color:#CBCBCB;
 }
 
-#segundaImagem{
-    width:29%;
-    height: 100%;
-    background-image: url(imagensNaruto/home2.jpg);
-    background-size: cover;
-    
-}
+
+
+
 
 .sessaoPersonagemNaruto{
     background-color: #FF7A03;
@@ -648,7 +773,6 @@ footer{
 footer a{
     text-decoration: none;
     color: white;
-
 }
 
 #footerPaginas{
