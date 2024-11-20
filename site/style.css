@@ -10,7 +10,7 @@ header{
     height: 8vh;
     position: sticky;
     top: 0;
-    background-color: rgba(255, 199, 79);
+    background-color: white;
 }
 header a{
     display: flex;
@@ -36,6 +36,7 @@ header a{
     height: 50%;
     background: -webkit-linear-gradient(right, #FF7A03, #FFC74F);
     border-radius: 5px;
+    border: 1px solid lightgrey;
 }
 
 #baixo a{
