@@ -59,7 +59,7 @@ body{
 
 .button{
     color: white;
-    background-color: aqua;
+    background-color:#d1902f;
     font-size: 16px;
     font-weight: bold;
     border: 0;
@@ -70,7 +70,7 @@ body{
 }
 
 .button:hover{
-    background-color: aquamarine;
+    background-color: rgb(231, 199, 140);
 }
 
 .hide{

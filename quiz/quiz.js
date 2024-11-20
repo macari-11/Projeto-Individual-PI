@@ -6,6 +6,7 @@ const questionText = document.querySelector(".questions")
 const nextQuestionButton = document.querySelector(".next-question")
 
 var currentQuestionIndex = 0 
+var questoesCorretas = 0  
 
 nextQuestionButton.addEventListener("click", displayNextQuestion)
 
@@ -20,10 +21,13 @@ function startGame(){
 
 
 
-// NESSA FUNÇÃO 
+// NESSA FUNÇÃO COMEÇAMOS LIMPANDO O LOCAL PARA A NOVA QUESTÃO E DEPOIS COLOCAMOS A NOVA 
 function displayNextQuestion(){
-
     resetState()
+
+    if(questions.length == currentQuestionIndex){
+        return finishGame()
+    }
 
     questionText.textContent = questions[currentQuestionIndex].question
     questions[currentQuestionIndex].answers.forEach(answer => {
@@ -45,7 +49,7 @@ function displayNextQuestion(){
     })
 }
 
-// NESSA FUNÇÃO FAZEMOS COM QUE O BOTÃO DA PROXÍMA PERGUNRA SUMA RETIRANDO A CLASS DELE
+// NESSA FUNÇÃO FAZEMOS COM QUE O BOTÃO DA PROXÍMA PERGUNTA SUMA RETIRANDO A CLASS DELE
 // E TAMBÉM LIMPAMOS AS RESPOSTAS ANTERIORES RETIRANDO OS BOTÕES DA DIV *ANSWER CONTAINER*
 function resetState(){
     nextQuestionButton.classList.add("hide")
@@ -60,12 +64,30 @@ function resetState(){
 // SE VIER O TRUE NO ELEMENTO SABEMOS QUE FOI A CERTA
 function selectAnswer(event){
     const answerClicked = event.target
+
+    if(answerClicked.dataset.correct){
+        questoesCorretas ++
+    }
     
     nextQuestionButton.classList.remove("hide")
     currentQuestionIndex ++
 }
 
+function finishGame(){
+    const totalQuestoes = questions.length
+    const performance = Math.floor((questoesCorretas * 100) / totalQuestoes)
 
+    var mensagemFinal = ""
+
+    if(performance >= 90){
+        mensagemFinal = "hogake"
+    }
+
+    questionsContainer.innerHTML = 
+    `<p> Você acertou: ${questoesCorretas} de  ${questions.length} questões <br> 
+    <span> Você é um: ${mensagemFinal} </span></p>`
+
+}
 
 
 
