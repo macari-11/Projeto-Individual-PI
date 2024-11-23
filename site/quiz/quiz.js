@@ -1,36 +1,36 @@
 // CHAMANDO AS VARIAVEIS ATRAVES DO CSS 
-const startGamebutton = document.querySelector(".start-quiz")
-const questionsContainer = document.querySelector(".questions-container")
-const answerContainer = document.querySelector(".answer-container")
-const questionText = document.querySelector(".questions")
-const nextQuestionButton = document.querySelector(".next-question")
+const botaoInicarQuiz = document.querySelector(".iniciar-quiz")
+const questoesBox = document.querySelector(".questoes-box")
+const respostaBox = document.querySelector(".resposta-box")
+const textoQuestoes = document.querySelector(".questoes")
+const botaoProximaQuestao = document.querySelector(".proximaQuestao")
 
-var currentQuestionIndex = 0 
+var questaoAtual = 0 
 var questoesCorretas = 0  
 
-nextQuestionButton.addEventListener("click", displayNextQuestion)
+botaoProximaQuestao.addEventListener("click", mostrarQuestaoNova)
 
 // AQUI AO CLICAR NO BOTÃO DE INICIAR  ADICIONAMOS E REMOVEMOS A CLASS HIDE
 // ASSIM ELE FICA DINAMICO
-function startGame(){
-    startGamebutton.classList.add("hide")
-    questionsContainer.classList.remove("hide")
+function IniciarGame(){
+    botaoInicarQuiz.classList.add("esconder")
+    questoesBox.classList.remove("esconder")
     
-    displayNextQuestion()
+    mostrarQuestaoNova()
 }
 
 
 
 // NESSA FUNÇÃO COMEÇAMOS LIMPANDO O LOCAL PARA A NOVA QUESTÃO E DEPOIS COLOCAMOS A NOVA 
-function displayNextQuestion(){
+function mostrarQuestaoNova(){
     resetState()
 
-    if(questions.length == currentQuestionIndex){
-        return finishGame()
+    if(questions.length == questaoAtual){
+        return terminarGame()
     }
 
-    questionText.textContent = questions[currentQuestionIndex].question
-    questions[currentQuestionIndex].answers.forEach(answer => {
+    textoQuestoes.textContent = questions[questaoAtual].question
+    questions[questaoAtual].answers.forEach(answer => {
 
         const newAnswer = document.createElement("button")
         newAnswer.classList.add("answer", "button")
@@ -41,39 +41,39 @@ function displayNextQuestion(){
         if(answer.correct){                               
             newAnswer.dataset.correct = answer.correct
         }
-        answerContainer.appendChild(newAnswer)
+        respostaBox.appendChild(newAnswer)
 
     // AQUI ELE CAPTA O EVENTO DE CLICK, E APÓS ISSO IRÁ RODAR A FUNÇÃO PARA VERIFICAR 
     // SE ESTÁ CERTA OU NÃO 
-        newAnswer.addEventListener("click", selectAnswer)
+        newAnswer.addEventListener("click", selecionarPergunta)
     })
 }
 
 // NESSA FUNÇÃO FAZEMOS COM QUE O BOTÃO DA PROXÍMA PERGUNTA SUMA RETIRANDO A CLASS DELE
 // E TAMBÉM LIMPAMOS AS RESPOSTAS ANTERIORES RETIRANDO OS BOTÕES DA DIV *ANSWER CONTAINER*
 function resetState(){
-    nextQuestionButton.classList.add("hide")
+    botaoProximaQuestao.classList.add("esconder")
         
-    while(answerContainer.firstChild){
-        answerContainer.removeChild(answerContainer.firstChild)
+    while(respostaBox.firstChild){
+        respostaBox.removeChild(respostaBox.firstChild)
     }
 }
 
 //VERIFICANDO SE A QUESTÃO ESTÁ CORRETA
 // O EVENT ELE RETORNAR O BOTÃO DO CLICK
 // SE VIER O TRUE NO ELEMENTO SABEMOS QUE FOI A CERTA
-function selectAnswer(event){
+function selecionarPergunta(event){
     const answerClicked = event.target
 
     if(answerClicked.dataset.correct){
         questoesCorretas ++
     }
     
-    nextQuestionButton.classList.remove("hide")
-    currentQuestionIndex ++
+    botaoProximaQuestao.classList.remove("esconder")
+    questaoAtual ++
 }
 
-function finishGame(){
+function terminarGame(){
     const totalQuestoes = questions.length
     const performance = Math.floor((questoesCorretas * 100) / totalQuestoes)
 
@@ -83,7 +83,7 @@ function finishGame(){
         mensagemFinal = "hogake"
     }
 
-    questionsContainer.innerHTML = 
+    questoesBox.innerHTML = 
     `<p> Você acertou: ${questoesCorretas} de  ${questions.length} questões <br> 
     <span> Você é um: ${mensagemFinal} </span></p>`
 
