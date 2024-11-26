@@ -271,7 +271,7 @@ header a{
     align-items: center;
     width: 922px;
     /* height: 90%; */
-    background-image: url(imagensNaruto/narutoPagina\ \(1\).jpg);
+    background-image: url(../site/imagensNaruto/narutoPagina\ \(1\).jpg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -280,7 +280,7 @@ header a{
     align-items: center;
     width: 65%;
     /* height: 90%; */
-    background-image: url(imagensNaruto/sasukePagina1.jpg);
+    background-image: url(../site/imagensNaruto/sasukePagina1.jpg);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -346,25 +346,25 @@ header a{
     
 }
 #imagemKakashi{
-    background-image: url(imagensNaruto/Kakashi_Dual_Rinnegan.webp);
+    background-image: url(../site/imagensNaruto/Kakashi_Dual_Rinnegan.webp);
     background-size: cover;
     width: 100%;
     height: 100%;
 }
 #imagemSakura{
-    background-image: url(imagensNaruto/Sakura_Byakugou.webp);
+    background-image: url(../site/imagensNaruto/Sakura_Byakugou.webp);
     background-size: cover;
     width: 100%;
     height: 100%;
 }
 #imagemSasuke{
-    background-image: url(imagensNaruto/SAsuke_Hebi.webp);
+    background-image: url(../site/imagensNaruto/SAsuke_Hebi.webp);
     background-size: cover;
     width: 100%;
     height: 100%;
 }
 #imagemNaruto{
-    background-image: url(imagensNaruto/Kurama_Chakra_Modo.webp);
+    background-image: url(../site/imagensNaruto/Kurama_Chakra_Modo.webp);
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -382,7 +382,7 @@ header a{
     align-items: center;
     width: 65%;
     /* height: 90%; */
-    background-image: url(imagensNaruto/sakuraPagina\ \(1\).jpg);
+    background-image: url(../site/imagensNaruto/sakuraPagina\ \(1\).jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100%;
@@ -392,7 +392,7 @@ header a{
     align-items: center;
     width: 65%;
     /* height: 90%; */
-    background-image: url(imagensNaruto/kakashiPagina\ \(1\).jpg);
+    background-image: url(../site/imagensNaruto/kakashiPagina\ \(1\).jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100%;
@@ -812,6 +812,7 @@ footer{
     justify-content: space-evenly;
     background-color: black;
     height: 25vh;
+    width: 100%;
 }
 
 footer a{
