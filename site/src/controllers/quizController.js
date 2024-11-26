@@ -1,8 +1,8 @@
-var quizzModel = require("../models/quizzModel")
+var quizzModel = require("../models/quizModel")
 
 function coletaquizController(req,res){
 
-    coletaQuiz.coletaSensor()
+    quizzModel.coletaQuiz()
     .then(
         function(resultado) {
             res.json(resultado);
