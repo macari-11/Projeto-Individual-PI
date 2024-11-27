@@ -87,6 +87,29 @@ function terminarGame(){
     `<p> Você acertou: ${questoesCorretas} de  ${questions.length} questões <br> 
     <span> Você é um: ${mensagemFinal} </span></p>`
 
+    fetch("/resultado/cadastrarResultado", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          pontuacaoServer: questoesCorretas,
+          
+        })
+      }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+          console.log(resposta);
+        } else {
+
+          console.log("Houve um erro ao colocar o resultado no Banco");
+        }
+
+      }).catch(function (erro) {
+        console.log(erro);
+      })
+
 }
 
 

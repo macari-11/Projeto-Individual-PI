@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/dash.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
     <script src="./dash.js"></script>
 </head>
-<style>
-    .graficoLuminosidade {
- width: 900px;
- height: 500px;
-}
-</style>
 <body>
-    <div class="graficoLuminosidade">
-        <canvas id="quizLinha"></canvas>
-       
+
+    <header>
+        <div class="div_header">
+            <a href="../dashboard/dash.html">Home</a>
+        </div>
+        <div class="div_header">    
+            <a href="sobremim.html">Sobre Mim</a>
+        </div>
+        <div class="div_header">
+            <a href="../site/login.html">Login/Cadastro</a>
+        </div>
+    </header>
+
+
+    <div class="telaDash">
+        <div class="TitulosDoQuiz"></div>
+        <div class="EspacoGraficos">
+            <div class="graficoLuminosidade">
+                <canvas id="quizLinha"></canvas>
+            </div>
+        </div>
+        
     </div>
+   
+
 </body>
 </html>
 

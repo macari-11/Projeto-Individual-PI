@@ -23,35 +23,31 @@ fetch("/coletaQuiz/coletaQuiz", {
             }
 
             const linhaQuizNaruto = document.getElementById('quizLinha');
-            
+
             const idResposta = {
                 labels: id,
                 datasets: [{
                     label: "",
-                    backgroundColor: '#B81476',
+                    backgroundColor: '#FF7A03',
                     data: resultadosQuiz,
-                    borderRadius: 20
-                },
-                ]
-
+                    borderRadius: 10
+                }]
             }
 
             const configQuiz = {
                 type: 'bar',
                 data: idResposta,
-                options:{
-                    responsive: true, 
-                    scales: {
-                        y: {
-                            beginAtZero: true 
+                options: {
+                        responsive: true,
+                        scales: {
+                                y: {
+                                beginAtZero: true
                         }
                     }
                 }
             }
 
             new Chart(linhaQuizNaruto, configQuiz);
-
-        
         });
 
     } else {
