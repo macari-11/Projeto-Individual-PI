@@ -78,6 +78,23 @@
                      id="senha_confirmacao_cadastro">
                   </div>
 
+                  <div class="inputDados">
+                   <span>Personagem Preferido </span>  
+                    <select name="" id="select_preferido">
+                      <option value="Naruto Uzumaki">Naruto Uzumaki</option>
+                      <option value="Sasuke Uchiha">Sasuke Uchiha</option>
+                      <option value="Sakura Haruno">Sakura Haruno</option>
+                      <option value="Kakashi Hatake">Kakashi Hatake</option>
+                      <option value="Minato Namikaze">Minato Namikaze</option>
+                      <option value="Itachi Uchiha">Itachi Uchiha</option>
+                      <option value="Shisui Uchiha">Shisui Uchiha</option>
+                      <option value="Madara Uchiha">Madara Uchiha</option>
+                      <option value="Shikamaru Nara">Shikamaru Nara</option>
+                      <option value="Gaara">Gaara</option>
+
+                    </select>
+                 </div>
+
                   <div class="inputDados btn">
                      <div class="divBotao"></div>
                      <input type="submit" value="Realizar Cadastro" onclick="cadastrar()">
@@ -118,6 +135,7 @@
 
       var emailVar = email_input_login.value;
       var senhaVar = senha_input_login.value;
+      
 
 
       if (emailVar == "" || senhaVar == "") {
@@ -132,6 +150,7 @@
 
       console.log("FORM LOGIN: ", emailVar);
       console.log("FORM SENHA: ", senhaVar);
+      
 
       fetch("/usuarios/autenticar", {
         method: "POST",
@@ -140,7 +159,8 @@
         },
         body: JSON.stringify({
           emailServer: emailVar,
-          senhaServer: senhaVar
+          senhaServer: senhaVar,
+          
         })
       }).then(function (resposta) {
         console.log("ESTOU NO THEN DO entrar()!")
@@ -153,6 +173,7 @@
             console.log(JSON.stringify(json));
             sessionStorage.EMAIL_USUARIO = json.email;
             sessionStorage.NOME_USUARIO = json.nome;
+            
 
             setTimeout(function () {
               window.location = "../site/index.html";
@@ -195,6 +216,7 @@
       var emailVar = email_input_cadastro.value;
       var senhaVar = senha_input_cadastro.value;
       var confirmacaoSenhaVar = senha_confirmacao_cadastro.value;
+      var preferidoVar = select_preferido.value;
 
       // Verificando se há algum campo em branco
       if (
@@ -230,7 +252,8 @@
 
           nomeServer: nomeVar,
           emailServer: emailVar,
-          senhaServer: senhaVar
+          senhaServer: senhaVar,
+          preferidoServer:  preferidoVar
 
         }),
       })
