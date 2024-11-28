@@ -12,8 +12,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #121214;
-    color: white;
+    background-image: url("../../assets/fundopretobranco.webp"); 
+    background-size: contain;
     height: 100vh;
 }
 
@@ -23,12 +23,12 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #121214;
+    color: white;
     width: 90%;
     max-width: 800px;
     border: 2px solid #e1e1e6;
     border-radius: 6px;
     padding: 16px;
-    box-shadow: 0 0 2px 2px;
 }
 
 .questoes-box{
@@ -58,19 +58,18 @@ body{
 }
 
 .button{
-    color: white;
-    background-color:#d1902f;
+    color: black;
+    background-color:white;
     font-size: 16px;
     font-weight: bold;
-    border: 0;
-    border-radius: 15px;
+    border: 2px solid black;
     height: 50px;
     padding: 0 32px;
-    transition: filter 0.2s;
+    transition: 0.8s;
 }
 
 .button:hover{
-    background-color: rgb(231, 199, 140);
+    background-color: #FFC74F;
 }
 
 .esconder{

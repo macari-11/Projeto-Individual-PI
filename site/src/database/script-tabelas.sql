@@ -12,3 +12,11 @@ senha varchar(45)
 select * from naruto;
 
 truncate table naruto;
+
+create table respostasQuiz(
+id int primary key auto_increment,
+resultado int
+);
+
+select * from respostasQuiz;
+drop table respostasQuiz;
