@@ -200,6 +200,7 @@ header a:hover{
     display: flex;
     flex-direction:row-reverse;
     justify-content: space-around;
+    
 }
 .esquerdaPersonagem{
     display: flex;
@@ -236,11 +237,12 @@ header a:hover{
 .fotosDireitaNaruto{
     display: flex;
     align-items: center;
-    width: 922px;
+    width: 65%;
     /* height: 90%; */
     background-image: url(../site/imagensNaruto/narutoPagina\ \(1\).jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    border: 2px solid black;
 }
 .fotosDireitaSasuke{
     display: flex;
@@ -248,8 +250,9 @@ header a:hover{
     width: 65%;
     /* height: 90%; */
     background-image: url(../site/imagensNaruto/sasukePagina1.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    border: 2px solid black;
 }
 .nomeDireita{
     width: 35%;
@@ -350,9 +353,10 @@ header a:hover{
     width: 65%;
     /* height: 90%; */
     background-image: url(../site/imagensNaruto/sakuraPagina\ \(1\).jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 100%;
+    border: 2px solid black;
 }
 .fotosDireitaKakashi{
     display: flex;
@@ -360,9 +364,11 @@ header a:hover{
     width: 65%;
     /* height: 90%; */
     background-image: url(../site/imagensNaruto/kakashiPagina\ \(1\).jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 100%;
+    border: 2px solid black;
+
 }
 .nomeDireitaInverso{
     width: 35%;
@@ -551,9 +557,9 @@ header a:hover{
 .OnuImagem{
     height: 50%;
     width: 90%;
-    background-image: url(imagensNaruto/home2.jpg);
+    background-image: url(../assets/fundoBecoKonoha.jpg);
     background-size: cover;
-    border-radius: 30px;
+    border: 2px solid black;
 }
 .OnuTexto{
     display: flex;
@@ -620,11 +626,12 @@ header a:hover{
     border-radius: 30px;
 }
 #sobreImagem{
-    background-image: url(imagensNaruto/home2.jpg);
+    background-image: url(../assets/fundoBecoKonoha.jpg);
     background-size: cover;
     height: 75%;
     width: 30%;
     background-color: #949494;
+    border: 2px solid black;
 }
 #sobrePreferido{
     display: flex;
@@ -708,6 +715,7 @@ header a:hover{
     background-image: url(../assets/minato1.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    border: 2px solid black;
 }
 .fotoMinato2{
     height: 79%;
@@ -715,13 +723,15 @@ header a:hover{
     background-image: url(../assets/minato2.jpg);
     background-size:cover;
     background-repeat: no-repeat;
+    border: 2px solid black;
 }
 .fotoMinato3{
     height: 79%;
     width: 252px;
     background-image: url(../assets/minato3.jpg);
-    background-size:contain;
+    background-size:cover;
     background-repeat: no-repeat;
+    border: 2px solid black;
 }
 .minatoJapones{
     display: flex;
@@ -746,6 +756,8 @@ header a:hover{
 .Episodios{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     height: 80%;
     width: 100%;
 }
@@ -767,7 +779,9 @@ header a:hover{
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    width: 100%;
+    width: 25%;
+    border: 2px solid black;
+    background-color: white;
 }
 .nomeEP{
     display: flex;
@@ -776,14 +790,15 @@ header a:hover{
     font-size: 190%;
     font-weight: bold;
     height: 10%;
-    width: 50%;
-    color: white;
+    /* width: 50%; */
+    color: black;
 
 }
 .fotoEP{
     height: 40%;
     width: 70%;
-    background-image: url(imagensNaruto/home2.jpg);
+    background-image: url(../assets/minato2.jpg);
+    border: 2px solid black;
 }
 .descEP{
     display: flex;
@@ -792,7 +807,7 @@ header a:hover{
     height: 50%;
     width: 60%;
     font-size: 150%;
-    color: white;
+    color: black;
 }
 
             /* FOOTER */
