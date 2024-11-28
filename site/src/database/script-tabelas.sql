@@ -1,22 +1,27 @@
 create database Naruto;
-
 use naruto;
 
-create table naruto (
+
+drop table naruto;
+
+create table cadastro (
 idCadastro int primary key auto_increment, 
 nome varchar(45),
 email varchar(45),
-senha varchar(45)
+senha varchar(45),
+preferido varchar(45)
 );
 
-select * from naruto;
-
+select * from cadastro;
 truncate table naruto;
 
-create table respostasQuiz(
+
+
+
+create table respostasQuiz (
 id int primary key auto_increment,
-resultado int
+resultado int 
 );
 
 select * from respostasQuiz;
-drop table respostasQuiz;
+truncate table respostasQuiz;

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/dash.css">
     <link rel="stylesheet" href="../css/style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
     <script src="./dash.js"></script>
+    
 </head>
+
 <body>
 
     <header>
         <div class="div_header">
             <a href="../dashboard/dash.html">Home</a>
         </div>
-        <div class="div_header">    
+        <div class="div_header">
             <a href="sobremim.html">Sobre Mim</a>
         </div>
         <div class="div_header">
@@ -26,19 +30,25 @@
 
 
     <div class="telaDash">
-        <div class="TitulosDoQuiz"></div>
+
         <div class="EspacoGraficos">
-            <div class="graficoLuminosidade">
-                <canvas id="quizLinha"></canvas>
-            </div>
+
+                    <div class="graficoTop7Quiz">
+                        <span>Top 7 pontuadores teste de conhecimento</span>
+                        <canvas id="quizBarraAcertos"></canvas>
+                    </div>
+
+
+                    <div class="graficoPersonagens">
+                        <span>Top 7 personagens dos usuarios</span>
+                        <canvas id="quizBarraPersonagens"></canvas>
+                    </div>
+
         </div>
-        
+
     </div>
-   
+
 
 </body>
+
 </html>
-
-
-
-

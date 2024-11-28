@@ -11,7 +11,8 @@ var app = express(); // Cria uma instância do Express
 var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var coletaQuizRouter = require("./src/routes/coletaquiz");
-var resultadoRouter = require("./src/routes/resultado")
+var coletaPersonagemRouter = require("./src/routes/coletaPersonagem");
+var resultadoRouter = require("./src/routes/resultado");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -22,6 +23,7 @@ app.use(cors());
 app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/coletaQuiz",coletaQuizRouter);
+app.use("/coletaPersonagem",coletaPersonagemRouter)
 app.use("/resultado",resultadoRouter);
 
 app.listen(PORTA, function () {
