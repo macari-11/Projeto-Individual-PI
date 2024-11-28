@@ -495,17 +495,22 @@ header a:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     height: 2000px;
-    background-color: #FFC74F;
+    background-image: url(../assets/fundoOnu.jpg);
+
 }
 #textoOnu{
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
-    height: 10%;
-    width: 50%;
+    justify-content: space-around;
+    height: 5%;
+    width: 35%;
     font-size: 5vh;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
 }
 #topicos{
     display: flex;
@@ -529,8 +534,10 @@ header a:hover{
     justify-content: space-between;
     height: 100%;
     width:40%;
-    background-color: azure;
-    border-radius: 30px;
+    background: url(../assets/fundoTelaonuBranco.jpg);
+    color: black;
+    border: 2px solid black;
+    
 }
 
 .OnuTitulo{
