@@ -150,7 +150,9 @@ html,body{
   height: 100%;
   width: 100%;
   place-items: center;
-  /* background-color: #272525; */
+  background-image: url(../assets/loginFundo.jpg);
+  background-size:cover;
+  
 }
 .CaixaLoginCadastro{
   overflow: hidden;

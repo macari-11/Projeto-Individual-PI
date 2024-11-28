@@ -1,6 +1,6 @@
 body{
-    background-image: url(../assets/fundoKonoha2.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../assets/fundopretobranco.webp);
+    background-size:contain;
 }
 
 .graficoLuminosidade {
