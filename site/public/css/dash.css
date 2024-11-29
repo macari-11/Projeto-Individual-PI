@@ -11,6 +11,9 @@ span{
     width: 50%;
     font-size: 120%;
 }
+canvas {
+    background-color: #f0f0f0; /* Cor de fundo do canvas */
+}
 
 .telaDash{
     display: flex;

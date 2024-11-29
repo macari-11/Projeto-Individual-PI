@@ -1,8 +1,8 @@
 
-const id = [];
-const resultadosQuiz = [];
-const resultadoQuizMedio = []
-const resultadoQuizHard = []
+const nome = []
+const resultado = []
+const resultadoMedio = []
+const resultadoHard= []
 
                               // GRÁFICO DO RESULTADO QUIZ
 fetch("/coletaQuiz/coletaQuiz", {
@@ -20,26 +20,25 @@ fetch("/coletaQuiz/coletaQuiz", {
             console.log(json);
 
             for (i = 0; i < json.length; i++) {
-                resultadosQuiz.push(json[i].resultado)
-                id.push(json[i].id)
-                resultadoQuizMedio.push(json[i].resultadoMedio)
-                resultadoQuizHard.push(json[i].resultadoHard)
-                
+                nome.push(json[i].Nome)
+                resultado.push(json[i].Resultado)
+                resultadoMedio.push(json[i].ResultadoMedio)
+                resultadoHard.push(json[i].ResultadoGrande)
             }
 
             const barraQuizFacil = document.getElementById('quizBarraFACIL');
             const barraQuizMedio = document.getElementById('quizBarraMEDIO');
             const barraQuizHard = document.getElementById('quizBarraHARD');
             
-                        //  GRAFICO HARD
+                        //  GRAFICO 
             const idRespostaFACIL = {
-                labels: id,
+                labels: nome,
                 datasets: [{
                     label: "",
                     backgroundColor: '#FF7A03',
-                    data: resultadosQuiz,
+                    data: resultado,
                     borderColor: 'black', 
-                    borderWidth: 2
+                    borderWidth: 2 
                 }]
             }
             const configQuizFACIL = {
@@ -48,19 +47,26 @@ fetch("/coletaQuiz/coletaQuiz", {
                 options: {
                         responsive: true,
                         scales: {
-                                y: {
-                                beginAtZero: true
+                            x: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo X
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo Y
+                                }
+                            }
                         }
-                    }
                 }
             }
                          //  GRAFICO MEDIO
             const idRespostaMEDIO = {
-                labels: id,
+                labels: nome,
                 datasets: [{
                     label: "",
                     backgroundColor: '#FF7A03',
-                    data: resultadoQuizMedio,
+                    data: resultadoMedio,
                     borderColor: 'black', 
                     borderWidth: 2
                 }]
@@ -71,19 +77,26 @@ fetch("/coletaQuiz/coletaQuiz", {
                 options: {
                         responsive: true,
                         scales: {
-                                y: {
-                                beginAtZero: true
+                            x: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo X
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo Y
+                                }
+                            }
                         }
-                    }
                 }
             }
-                        //  GRAFICO HARD
+                        //GRAFICO HARD
             const idRespostaHARD = {
-                labels: id,
+                labels: nome,
                 datasets: [{
                     label: "",
                     backgroundColor: '#FF7A03',
-                    data: resultadoQuizMedio,
+                    data: resultadoHard,
                     borderColor: 'black', 
                     borderWidth: 2
                 }]
@@ -94,10 +107,17 @@ fetch("/coletaQuiz/coletaQuiz", {
                 options: {
                         responsive: true,
                         scales: {
-                                y: {
-                                beginAtZero: true
+                            x: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo X
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo Y
+                                }
+                            }
                         }
-                    }
                 }
             }
 
@@ -180,10 +200,17 @@ fetch("/coletaPersonagem/coletaPersonagem", {
                 options: {
                         responsive: true,
                         scales: {
-                                y: {
-                                beginAtZero: true
+                            x: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo X
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo Y
+                                }
+                            }
                         }
-                    }
                 }
             }
 

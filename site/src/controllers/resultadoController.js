@@ -5,8 +5,9 @@ var resultadoModel = require("../models/resultadoModel");
 function cadastrarResultado(req, res) {
 
     var pontuacao = req.body.pontuacaoServer;
+    var idUsuario = req.body.usuarioServer;
 
-    resultadoModel.cadastrarResultado(pontuacao)
+    resultadoModel.cadastrarResultado(idUsuario,pontuacao)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -50,8 +51,9 @@ function cadastrarResultadoMedio(req, res) {
 function cadastrarResultadoHard(req, res) {
 
     var pontuacao = req.body.pontuacaoServer;
+    var idUsuario = req.body.usuarioServer;
 
-    resultadoModel.cadastrarResultadoHard(pontuacao)
+    resultadoModel.cadastrarResultadoHard(idUsuario,pontuacao)
         .then(
             function (resultado) {
                 res.json(resultado);
