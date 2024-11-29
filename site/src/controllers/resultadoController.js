@@ -27,8 +27,9 @@ function cadastrarResultado(req, res) {
 function cadastrarResultadoMedio(req, res) {
 
     var pontuacao = req.body.pontuacaoServer;
+    var idUsuario = req.body.usuarioServer;
 
-    resultadoModel.cadastrarResultadoMedio(pontuacao)
+    resultadoModel.cadastrarResultadoMedio(idUsuario,pontuacao)
         .then(
             function (resultado) {
                 res.json(resultado);

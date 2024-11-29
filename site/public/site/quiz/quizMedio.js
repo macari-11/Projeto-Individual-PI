@@ -94,6 +94,7 @@ function terminarGame(){
         },
         body: JSON.stringify({
           pontuacaoServer: questoesCorretas,
+          usuarioServer: sessionStorage.ID_USUARIO
           
         })
       }).then(function (resposta) {
