@@ -1,7 +1,5 @@
 create database Naruto;
 use naruto;
-
-
 drop table naruto;
 
 create table cadastro (
@@ -15,13 +13,21 @@ preferido varchar(45)
 select * from cadastro;
 truncate table naruto;
 
-
-
+select preferido as Personagem,  -- select para pegar os personagens
+COUNT(preferido) AS quantidade
+from cadastro
+group by preferido
+order by quantidade desc;
 
 create table respostasQuiz (
 id int primary key auto_increment,
-resultado int 
+resultado int,
+resultadoMedio int,
+resultadoHard int
 );
+
+select resultado, resultadoMedio, resultadoHard from respostasQuiz;
 
 select * from respostasQuiz;
 truncate table respostasQuiz;
+drop table respostasQuiz;

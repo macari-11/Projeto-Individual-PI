@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz NARUTINHO</title>
+    <link rel="stylesheet" href="quiz.css">
+    <script src="quizHard.js" async></script>
+
+    <!-- ASYNC faz o JS rodar apenas apos o html ser criado -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="questoes-box esconder">
+            <span class="questoes">Pergunta aqui</span>
+            <div class="resposta-box">
+                <button class="button">Resposta1</button>
+                <button class="button">Resposta2</button>
+                <button class="button">Resposta3</button>
+                <button class="button">Resposta4</button>
+            </div>
+        </div>
+        <div class="button-box">
+            <button onclick="IniciarGame()" class="iniciar-quiz button">Começar quiz</button>
+            <button class="proximaQuestao button esconder">Próxima pergunta</button>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

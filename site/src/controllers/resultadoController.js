@@ -1,32 +1,75 @@
 var resultadoModel = require("../models/resultadoModel");
 
 
-
+//NORMAL
 function cadastrarResultado(req, res) {
-    // precisa pegar esse valor ainda
-    var pontuacao = req.body.pontuacaoServer; 
 
+    var pontuacao = req.body.pontuacaoServer;
 
+    resultadoModel.cadastrarResultado(pontuacao)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        resultadoModel.cadastrarResultado(pontuacao)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    }
+//MEDIO
+function cadastrarResultadoMedio(req, res) {
+
+    var pontuacao = req.body.pontuacaoServer;
+
+    resultadoModel.cadastrarResultadoMedio(pontuacao)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+//HARD
+function cadastrarResultadoHard(req, res) {
+
+    var pontuacao = req.body.pontuacaoServer;
+
+    resultadoModel.cadastrarResultadoHard(pontuacao)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
 
 module.exports = {
-    cadastrarResultado
+    cadastrarResultado,
+    cadastrarResultadoMedio,
+    cadastrarResultadoHard
 }
