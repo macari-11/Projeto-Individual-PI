@@ -112,9 +112,9 @@ function terminarGame(){
 
 }
 
-function Voltar(){
-    window.location = "../index.html";
-}
+ function Voltar(){
+        window.location = "../index.html";
+    }
 
 
 
