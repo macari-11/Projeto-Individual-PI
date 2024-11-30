@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="../css/dash.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
-    <script src="./dash.js"></script>
-    <script src="../site/js/header.js"></script>
+    
     
 </head>
 
@@ -68,9 +65,23 @@
 
         
 
-        <div class="graficoPersonagens">
-            <span>Preferidos da galera</span>
-            <canvas id="quizBarraPersonagens"></canvas>
+        <div class="graficosBaixo">
+
+            <div class="mediaQuiz">
+                <span id="spanQuizFacil"></span>
+            </div>
+            <div class="mediaQuiz">
+                <span id="spanQuizMedio"></span>
+            </div>
+            <div class="mediaQuiz">
+                <span id="spanQuizHard"></span>
+            </div>
+
+            <div class="graficoPersonagens"> 
+                <span>Preferidos da galera</span>
+                <canvas id="quizBarraPersonagens"></canvas>
+            </div>
+
         </div>
 
     </div>
@@ -79,3 +90,8 @@
 </body>
 
 </html>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
+    <script src="./dash.js"></script>
+    <script src="../site/js/header.js"></script>

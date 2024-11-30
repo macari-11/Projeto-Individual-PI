@@ -12,6 +12,7 @@ var indexRouter = require("./src/routes/index");
 var usuarioRouter = require("./src/routes/usuarios");
 var coletaQuizRouter = require("./src/routes/coletaquiz");
 var coletaPersonagemRouter = require("./src/routes/coletaPersonagem");
+var coletaMediaQuizRouter = require("./src/routes/coletaMediaQuiz");
 var resultadoRouter = require("./src/routes/resultado");
 
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use("/", indexRouter);
 app.use("/usuarios", usuarioRouter);
 app.use("/coletaQuiz",coletaQuizRouter);
 app.use("/coletaPersonagem",coletaPersonagemRouter)
+app.use("/coletaMediaQuiz",coletaMediaQuizRouter)
 app.use("/resultado",resultadoRouter);
 
 app.listen(PORTA, function () {

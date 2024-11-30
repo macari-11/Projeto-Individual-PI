@@ -172,7 +172,6 @@ html,body{
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 .CaixaLoginCadastro .SlideCima{
   position: relative;
@@ -195,7 +194,6 @@ html,body{
   line-height: 48px;
   cursor: pointer;
   z-index: 1;
-  
 }
 .SlideCima label.cadastro{
   color: #000;
@@ -208,7 +206,7 @@ html,body{
   z-index: 0;
   border-radius: 5px;
   background: -webkit-linear-gradient(left, #FF7A03, #FFC74F);
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  /* transition: 0.6s; */
 }
 input[type="radio"]{
   display: none;
@@ -241,7 +239,7 @@ input[type="radio"]{
 }
 .EspaçoLoginCadastro .SlideBaixo form{
   width: 50%;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  transition: 0.6s;
 }
 .SlideBaixo form .inputDados{
   height: 50px;
@@ -257,11 +255,10 @@ input[type="radio"]{
   border: 1px solid lightgrey;
   border-bottom-width: 2px;
   font-size: 17px;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 .SlideBaixo form .inputDados input:focus{
   border-color: #FF7A03;
-  box-shadow: inset 0 0 3px #fb6aae;
 }
 .SlideBaixo form .inputDados input::placeholder{
   color: #999;
@@ -295,7 +292,7 @@ form .btn .divBotao{
   left: -100%;
   background: -webkit-linear-gradient(right, #FF7A03, #FFC74F);
   border-radius: 5px;
-  transition: all 0.4s ease;;
+  /* transition: all 0.4s ease; */
 }
 form .btn:hover .divBotao{
   left: 0;

@@ -195,7 +195,7 @@ fetch("/coletaPersonagem/coletaPersonagem", {
                 }]
             }
             const configPersonagem = {
-                type: 'pie',
+                type: 'doughnut',
                 data: nomePersonagem,
                 options: {
                         responsive: true,
@@ -221,6 +221,113 @@ fetch("/coletaPersonagem/coletaPersonagem", {
     } else {
 
         console.log("Houve um erro ao armazenar sua pontuação!");
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            finalizarAguardar(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+var spanMediaQuiz = document.getElementById("spanQuizFacil")  
+var mediaQuiz =[]
+
+fetch("/coletaMediaQuiz/coletaMediaQuiz", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}).then(function (resposta) {
+    console.log("Peguei a media do QuizFacil")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            
+            spanMediaQuiz.innerHTML = json[0].quizFacil
+            
+        });
+
+    } else {
+
+        console.log("Houve um erro ao armazenar a KPI do quiz facil");
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            finalizarAguardar(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+
+var mediaQuizMedio =[]
+var spanMediaQuizMedio = document.getElementById("spanQuizMedio")
+
+fetch("/coletaMediaQuiz/coletaMediaQuizMedio", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}).then(function (resposta) {
+    console.log("Peguei a media do QuizFacil")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            
+            spanMediaQuizMedio.innerHTML = json[0].quizMedio
+            
+        });
+
+    } else {
+
+        console.log("Houve um erro ao armazenar a KPI do quiz médio");
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            finalizarAguardar(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+
+var mediaQuizHard =[]
+var spanMediaQuizHard = document.getElementById("spanQuizHard")
+
+fetch("/coletaMediaQuiz/coletaMediaQuizHard", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}).then(function (resposta) {
+    console.log("Peguei a media do QuizFacil")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            
+            spanMediaQuizHard.innerHTML = json[0].quizHard
+            
+        });
+
+    } else {
+
+        console.log("Houve um erro ao armazenar a KPI do quiz Hard");
 
         resposta.text().then(texto => {
             console.error(texto);

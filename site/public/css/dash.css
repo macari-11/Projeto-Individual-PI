@@ -39,13 +39,27 @@ canvas {
     width: 30%;
     height: 80%;
 }
+
+.graficosBaixo{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 40%;
+    width: 100%;
+    background-color: aqua;
+}
 .graficoPersonagens{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 40%;
-    height: 30%;
+    width: 25%;
+    height: 90%;
+    background-color: aqua;
 }
 
-
+.mediaQuiz{
+    background-color: antiquewhite;
+    width: 20%;
+    height: 90%;
+}
