@@ -111,7 +111,9 @@ function terminarGame(){
       })
 
 }
-
+function Voltar(){
+    window.location = "../index.html";
+}
 
 
 

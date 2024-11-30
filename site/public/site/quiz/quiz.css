@@ -6,6 +6,19 @@
 
 button{
     cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    transition: 0.8s;
+    width: 100%;
+    height: 100%;
+}
+
+.divVoltar button:hover{
+    background-color: black;
+    color: white;
+    width: 90%;
+    height: 90%;
 }
 
 body{
@@ -16,7 +29,10 @@ body{
     background-size: contain;
     height: 100vh;
 }
-
+.divVoltar{
+    width: 5%;
+    height: 5%;
+}
 .container{
     display: flex;
     flex-direction: column;
