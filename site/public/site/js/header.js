@@ -9,3 +9,9 @@ function AbrirOpcoes(){
         menuOptions.style.display = "block";
     }
 }
+
+
+function SairDaSecao(){
+    sessionStorage.clear();
+    window.location = "../site/index.html"
+}
