@@ -18,7 +18,7 @@ canvas {
 .telaDash{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100vh;
@@ -29,7 +29,7 @@ canvas {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 60%;
+    height: 50%;
 }
 .graficos{
     display: flex;
@@ -46,7 +46,6 @@ canvas {
     flex-direction: row;
     height: 40%;
     width: 100%;
-    background-color: aqua;
 }
 .graficoPersonagens{
     display: flex;
@@ -55,11 +54,34 @@ canvas {
     flex-direction: column;
     width: 25%;
     height: 90%;
-    background-color: aqua;
 }
 
 .mediaQuiz{
-    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     width: 20%;
     height: 90%;
+}
+.TituloKPI{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    width: 80%;
+    background-color: white;
+    border: 2px solid black;
+    font-size: x-large;
+}
+
+.mediaQuiz span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    height: 35%;
+    font-size: xx-large;
 }

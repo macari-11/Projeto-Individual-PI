@@ -9,4 +9,11 @@ router.post("/coletaQuiz", function (req, res) {
     coletaquizController.coletaquizController(req, res);
 })
 
+router.post("/coletaQuizMedio", function (req, res) {
+    coletaquizController.coletaquizMedioController(req, res);
+})
+
+router.post("/coletaQuizHard", function (req, res) {
+    coletaquizController.coletaquizHardController(req, res);
+})
 module.exports = router;

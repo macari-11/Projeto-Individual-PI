@@ -1,8 +1,6 @@
 
 const nome = []
 const resultado = []
-const resultadoMedio = []
-const resultadoHard= []
 
                               // GRÁFICO DO RESULTADO QUIZ
 fetch("/coletaQuiz/coletaQuiz", {
@@ -22,15 +20,11 @@ fetch("/coletaQuiz/coletaQuiz", {
             for (i = 0; i < json.length; i++) {
                 nome.push(json[i].Nome)
                 resultado.push(json[i].Resultado)
-                resultadoMedio.push(json[i].ResultadoMedio)
-                resultadoHard.push(json[i].ResultadoGrande)
             }
 
             const barraQuizFacil = document.getElementById('quizBarraFACIL');
-            const barraQuizMedio = document.getElementById('quizBarraMEDIO');
-            const barraQuizHard = document.getElementById('quizBarraHARD');
             
-                        //  GRAFICO 
+                        //  GRAFICO FACIL 
             const idRespostaFACIL = {
                 labels: nome,
                 datasets: [{
@@ -60,76 +54,14 @@ fetch("/coletaQuiz/coletaQuiz", {
                         }
                 }
             }
-                         //  GRAFICO MEDIO
-            const idRespostaMEDIO = {
-                labels: nome,
-                datasets: [{
-                    label: "",
-                    backgroundColor: '#FF7A03',
-                    data: resultadoMedio,
-                    borderColor: 'black', 
-                    borderWidth: 2
-                }]
-            }
-            const configQuizMEDIO = {
-                type: 'bar',
-                data: idRespostaMEDIO,
-                options: {
-                        responsive: true,
-                        scales: {
-                            x: {
-                                grid: {
-                                    display: false // Remove as linhas de grade no eixo X
-                                }
-                            },
-                            y: {
-                                grid: {
-                                    display: false // Remove as linhas de grade no eixo Y
-                                }
-                            }
-                        }
-                }
-            }
-                        //GRAFICO HARD
-            const idRespostaHARD = {
-                labels: nome,
-                datasets: [{
-                    label: "",
-                    backgroundColor: '#FF7A03',
-                    data: resultadoHard,
-                    borderColor: 'black', 
-                    borderWidth: 2
-                }]
-            }
-            const configQuizHARD = {
-                type: 'bar',
-                data: idRespostaHARD,
-                options: {
-                        responsive: true,
-                        scales: {
-                            x: {
-                                grid: {
-                                    display: false // Remove as linhas de grade no eixo X
-                                }
-                            },
-                            y: {
-                                grid: {
-                                    display: false // Remove as linhas de grade no eixo Y
-                                }
-                            }
-                        }
-                }
-            }
-
+              
             new Chart(barraQuizFacil, configQuizFACIL);
-            new Chart(barraQuizMedio, configQuizMEDIO);
-            new Chart(barraQuizHard, configQuizHARD);
-            
+             
         });
 
     } else {
 
-        console.log("Houve um erro ao armazenar sua pontuação!");
+        console.log("Houve um erro ao armazenar o gráfico FACIL!");
 
         resposta.text().then(texto => {
             console.error(texto);
@@ -140,6 +72,160 @@ fetch("/coletaQuiz/coletaQuiz", {
 }).catch(function (erro) {
     console.log(erro);
 })
+
+
+const nomeMedio = []
+const resultadoMedio = []
+
+                              // GRÁFICO DO RESULTADO QUIZ
+fetch("/coletaQuiz/coletaQuizMedio", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}).then(function (resposta) {
+    console.log("Peguei os dados do banco")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+
+            for (i = 0; i < json.length; i++) {
+                nomeMedio.push(json[i].Nome)
+                resultadoMedio.push(json[i].ResultadoMedio)
+            }
+
+            const barraQuizMedio = document.getElementById('quizBarraMEDIO');
+            
+                        //  GRAFICO FACIL 
+            const idRespostaMedio = {
+                labels: nomeMedio,
+                datasets: [{
+                    label: "",
+                    backgroundColor: '#FF7A03',
+                    data: resultadoMedio,
+                    borderColor: 'black', 
+                    borderWidth: 2 
+                }]
+            }
+            const configQuizMedio = {
+                type: 'bar',
+                data: idRespostaMedio,
+                options: {
+                        responsive: true,
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo X
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo Y
+                                }
+                            }
+                        }
+                }
+            }
+              
+            new Chart(barraQuizMedio, configQuizMedio);
+             
+        });
+
+    } else {
+
+        console.log("Houve um erro ao armazenar o gráfico MEDIO!");
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            finalizarAguardar(texto);
+        });
+    }
+                         
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+const nomeHard = []
+const resultadoHard = []
+
+                              // GRÁFICO DO RESULTADO QUIZ
+fetch("/coletaQuiz/coletaQuizHard", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    }
+}).then(function (resposta) {
+    console.log("Peguei os dados do banco")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+
+            for (i = 0; i < json.length; i++) {
+                nomeHard.push(json[i].Nome)
+                resultadoHard.push(json[i].ResultadoHard)
+            }
+
+            const barraQuizHard = document.getElementById('quizBarraHARD');
+            
+                        //  GRAFICO FACIL 
+            const idRespostaHard = {
+                labels: nomeHard,
+                datasets: [{
+                    label: "",
+                    backgroundColor: '#FF7A03',
+                    data: resultadoHard,
+                    borderColor: 'black', 
+                    borderWidth: 2 
+                }]
+            }
+            const configQuizHard = {
+                type: 'bar',
+                data: idRespostaHard,
+                options: {
+                        responsive: true,
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo X
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false // Remove as linhas de grade no eixo Y
+                                }
+                            }
+                        }
+                }
+            }
+              
+            new Chart(barraQuizHard, configQuizHard);
+             
+        });
+
+    } else {
+
+        console.log("Houve um erro ao armazenar o gráfico HARD!");
+
+        resposta.text().then(texto => {
+            console.error(texto);
+            finalizarAguardar(texto);
+        });
+    }
+                         
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+
+
+
+
 
 
                                                 // GRÁFICO PERSONAGENS PREFERIDOS DO USUARIO 
