@@ -71,6 +71,8 @@ function selecionarPergunta(event){
     
     botaoProximaQuestao.classList.remove("esconder")
     questaoAtual ++
+
+    mostrarQuestaoNova()
 }
 
 function terminarGame(){
@@ -125,9 +127,8 @@ function validarSessaoMedio() {
 
 
     if (email === undefined && nome === undefined) {
-        return window.location = "../login.html"; 
+        return window.location = "../login2.html"; 
     } 
-    return window.location = "./quiz/quizMedio.html"; 
 }
 
 
@@ -143,30 +144,48 @@ function validarSessaoMedio() {
 
 const questions = [
     {
-        question: "MEDIO1",
+        question: " Qual o parceiro do Itachi na Akatsuki?",
         answers: [
-            {text: "resposta1a", correct: true},
-            {text: "resposta1b", correct: false},
-            {text: "resposta1c", correct: false},
-            {text: "resposta1d", correct: false},
+            {text: "Pain", correct: false},
+            {text: "Tobi", correct: false},
+            {text: "Hidan", correct: false},
+            {text: "Kisame", correct: true},
         ]
     },
     {
-        question: "MEDIO2",
+        question: " Qual é o nome da vila oculta da areia? ",
         answers: [
-            {text: "respostada2a", correct: true},
-            {text: "respostada2b", correct: false},
-            {text: "respostada2c", correct: false},
-            {text: "respostada2d", correct: false},
+            {text: "Konohagakure", correct: false},
+            {text: "Kirigakure", correct: false},
+            {text: "Sunagakure", correct: true},
+            {text: "Amegakure", correct: false},
         ]
     },
     {
-        question: "MEDIO3",
+        question: "Qual o nome do pai do Naruto",
         answers: [
-            {text: "respostada3a", correct: true},
-            {text: "respostada3b", correct: false},
-            {text: "respostada3c", correct: false},
-            {text: "respostada3d", correct: false},
+            {text: "Minato Namikaze", correct: true},
+            {text: "Minato Uzumaki", correct: false},
+            {text: "Minato Sarotobi", correct: false},
+            {text: "Minato Hyuuga ", correct: false},
+        ]
+    },
+    {
+        question: "Quantos episódios tem Naruto Classico?",
+        answers: [
+            {text: "215", correct: false},
+            {text: "220", correct: true},
+            {text: "225", correct: false},
+            {text: "230", correct: false},
+        ]
+    },
+    {
+        question: "Quem matou o Asuma? ",
+        answers: [
+            {text: "Deidara", correct: false},
+            {text: "Kabuto", correct: false},
+            {text: "Kakuzo", correct: false},
+            {text: "Hidan", correct: true},
         ]
     },
 ]

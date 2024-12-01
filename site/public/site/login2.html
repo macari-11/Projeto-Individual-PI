@@ -16,11 +16,11 @@
     <div class="tela">
         <div class="containerLogin">
             <div class="containerLoginDireito">
-                <div class="alerta_erro">
+                
                     <div class="card_erro" id="cardErro">
                       <span id="mensagem_erro"></span>
                     </div>
-                  </div>
+                  
             </div>
             <div class="containerLoginEsquerdo">
                 <div class="Login">
@@ -28,12 +28,14 @@
                             <span>LOGIN</span>
                         </div>
                         <div class="LoginMeio">
-                                <input type="text" id="email_input">
-                                <input type="text" id="senha_input">
+                                <input type="text" id="email_input" placeholder="Coloque seu E-mail Ninja!" required>
+                                <input type="text" id="senha_input" placeholder="Senha" required>
                                 <button onclick="entrar()">LOGIN</button>
                         </div>
                         <div class="LoginBaixo">
-                            <a href="./Cadastro.html">CADASTRE-SE AGORA</a>
+                            <b><span>Ainda não é um ninja?  
+                            </span> <a href="./Cadastro.html">CADASTRE-SE AGORA</a></b>
+                            
                         </div>
                     
                 </div>

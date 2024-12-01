@@ -71,6 +71,8 @@ function selecionarPergunta(event){
     
     botaoProximaQuestao.classList.remove("esconder")
     questaoAtual ++
+
+    mostrarQuestaoNova()
 }
 
 function terminarGame(){
@@ -123,9 +125,8 @@ function validarSessaoHard() {
 
 
     if (email === undefined && nome === undefined) {
-        return window.location = "../login.html"; 
+        return window.location = "../login2.html"; 
     } 
-    return window.location = "./quiz/quizHard.html"; 
 }
 
 
@@ -143,30 +144,48 @@ function validarSessaoHard() {
 
 const questions = [
     {
-        question: "HARD1",
+        question: "Qual ninja completou mais missões por Konoha",
         answers: [
-            {text: "resposta1a", correct: true},
-            {text: "resposta1b", correct: false},
-            {text: "resposta1c", correct: false},
-            {text: "resposta1d", correct: false},
+            {text: "Kakashi Hatake", correct: false},
+            {text: "Maito Gai", correct: false},
+            {text: "Jiraya", correct: true},
+            {text: "Sakumo Hatake ", correct: false},
         ]
     },
     {
-        question: "HARD2",
+        question: "Qual é o nome da vila oculta da Névoa?",
         answers: [
-            {text: "respostada2a", correct: true},
-            {text: "respostada2b", correct: false},
-            {text: "respostada2c", correct: false},
-            {text: "respostada2d", correct: false},
+            {text: "Kirigakure", correct: true},
+            {text: "Iwagakure", correct: false},
+            {text: "Otogakure", correct: false},
+            {text: "Takigakure", correct: false},
         ]
     },
     {
-        question: "HARD3",
+        question: " Qual desses símbolos de anéis é o de Itachi? ",
         answers: [
-            {text: "respostada3a", correct: true},
-            {text: "respostada3b", correct: false},
-            {text: "respostada3c", correct: false},
-            {text: "respostada3d", correct: false},
+            {text: "南", correct: false},
+            {text: "朱", correct: true},
+            {text: "玉", correct: false},
+            {text: "北", correct: false},
+        ]
+    },
+    {
+        question: "Qual Bijuu foi capturada pelo Itachi e Kisame",
+        answers: [
+            {text: "Isobu", correct: false},
+            {text: "Choumei", correct: false},
+            {text: "Son Gokuu", correct: true},
+            {text: "Saiken", correct: false},
+        ]
+    },
+    {
+        question: "Qual o nome do tio do Lamen?",
+        answers: [
+            {text: "Touchi", correct: false},
+            {text: "Tunchi", correct: false},
+            {text: "Tenchi", correct: false},
+            {text: "Teuchi", correct: true},
         ]
     },
 ]

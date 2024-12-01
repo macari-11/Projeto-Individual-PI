@@ -3,6 +3,32 @@ body{
     padding: 0;
     font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+input{
+  border: 2px solid black;
+  width: 60%;
+  height: 10%;
+}
+
+button{
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  cursor: pointer;
+  width: 60%;
+  height: 20%;
+  transition: 0.8s;
+}
+button:hover{
+  background-color: orange;
+  color: black;
+  width: 65%;
+  height: 25%;
+}
+.LoginBaixo a{
+  text-decoration: none;
+  color: orange;
+}
+
 .tela {
     display: flex;
     align-items: center;
@@ -10,6 +36,7 @@ body{
     height: 100vh;
     width: 100%;
     background-image: url(../assets/fundopretobranco.webp);
+    background-size: contain;
   }
   
   .containerLogin{
@@ -19,6 +46,7 @@ body{
     flex-direction: row;
     width: 65%;
     height: 90%;
+    border: 2px solid black;
   }
 
   .containerLoginDireito{
@@ -27,7 +55,9 @@ body{
     justify-content: center;
     height: 100%;
     width: 50%;
-    background-color: white;
+    background-image: url(../assets/FundoLogin3.gif);
+    background-size: cover;
+    border: 2px solid black;
   }
   .containerLoginEsquerdo{
     display: flex;
@@ -36,7 +66,11 @@ body{
     justify-content: center;
     height: 100%;
     width: 50%;
-    background-color:white;
+    background-image: url(../assets/KakashiFundo.jpg);
+  }
+
+  .LoginCima{
+    font-size: xx-large;
   }
   .Login{
     display: flex;

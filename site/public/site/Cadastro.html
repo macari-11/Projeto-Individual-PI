@@ -30,8 +30,8 @@
                         <div class="CadastroMeio">
                                 <input type="text" id="nome_input" placeholder="Nome Completo" required>
                                 <input type="text" id="email_input" placeholder="E-mail" required>
-                                <input type="text" id="senha_input" placeholder="Sua senha" required>
-                                <input type="text" id="confirmacao_senha_input" placeholder="Confirme sua senha" required>
+                                <input type="password" id="senha_input" placeholder="Sua senha" required>
+                                <input type="password" id="confirmacao_senha_input" placeholder="Confirme sua senha" required>
                                 <button onclick="cadastrar()">Cadastrar-se</button>
                                 <div>
                                   <Span>Personagem Preferido</Span>
@@ -52,7 +52,7 @@
                                 </select>
                         </div>
                         <div class="CadastroBaixo">
-                            <a href="">CADASTRE-SE AGORA</a>
+                            
                         </div>
                     
                     
@@ -77,7 +77,7 @@
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" 
-    ) {
+    ){
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
         "(Mensagem de erro para todos os campos em branco)";
@@ -87,6 +87,21 @@
     } else {
       setInterval(sumirMensagem, 5000);
     }
+
+      if(!emailVar.includes("@")){
+          cardErro.style.display = "block";
+          mensagem_erro.innerHTML =
+          "(E-mail precisa conter '@'')";
+          finalizarAguardar();
+          return false;
+      }
+      else if(senhaVar.length !=8){
+          cardErro.style.display = "block";
+          mensagem_erro.innerHTML =
+          "(Senha precisa ter mais que 6 digitos)";
+          finalizarAguardar();
+          return false;
+      }
 
 
     // Enviando o valor da nova input

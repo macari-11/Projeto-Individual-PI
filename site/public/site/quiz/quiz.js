@@ -57,6 +57,8 @@ function resetState(){
     while(respostaBox.firstChild){
         respostaBox.removeChild(respostaBox.firstChild)
     }
+
+    
 }
 
 //VERIFICANDO SE A QUESTÃO ESTÁ CORRETA
@@ -71,6 +73,8 @@ function selecionarPergunta(event){
     
     botaoProximaQuestao.classList.remove("esconder")
     questaoAtual ++
+
+    mostrarQuestaoNova()
 }
 
 function terminarGame(){
@@ -123,9 +127,9 @@ function terminarGame(){
     
     
         if (email === undefined && nome === undefined) {
-            return window.location = "../login.html"; 
+             return window.location = "../login2.html"; 
         } 
-        return window.location = "./quiz/quiz.html"; 
+        
     }
 
 
@@ -143,30 +147,66 @@ function terminarGame(){
 
 const questions = [
     {
-        question: "Pergunta1",
+        question: "Qual o criador de Naruto?",
         answers: [
-            {text: "resposta1a", correct: true},
-            {text: "resposta1b", correct: false},
-            {text: "resposta1c", correct: false},
-            {text: "resposta1d", correct: false},
+            {text: "Akira Toriyama", correct: false},
+            {text: "Rumiko Takahashi", correct: false},
+            {text: "Masashi Kishimoto", correct: true},
+            {text: "Eiichiro Oda", correct: false},
         ]
     },
     {
-        question: "Pergunta2",
+        question: "Qual o nome da Vila Oculta da Folha?",
         answers: [
-            {text: "respostada2a", correct: true},
-            {text: "respostada2b", correct: false},
-            {text: "respostada2c", correct: false},
-            {text: "respostada2d", correct: false},
+            {text: "Konohagakure", correct: true},
+            {text: "Kirigakure", correct: false},
+            {text: "Sunagakure", correct: false},
+            {text: "Amegakure", correct: false},
         ]
     },
     {
-        question: "Pergunta3",
+        question: "Quais são os 3 principais Doujutsu no mundo ninja?",
         answers: [
-            {text: "respostada3a", correct: true},
-            {text: "respostada3b", correct: false},
-            {text: "respostada3c", correct: false},
-            {text: "respostada3d", correct: false},
+            {text: "Jougan, Teseigan e Byakugan", correct: false},
+            {text: "Sharingan, Mangekyou Sharingan e Byakugan", correct: false},
+            {text: "Rinegan, Byakugan e Mangekyou Sharingan ", correct: false},
+            {text: "Sharingan, Byakugan e Rinegan", correct: true},
+        ]
+    },
+    {
+        question: "Uzumaki Naruto faz parte de qual time?",
+        answers: [
+            {text: "Time 8", correct: false},
+            {text: "Time 5", correct: false},
+            {text: "Time 9 ", correct: false},
+            {text: "Time 7", correct: true},
+        ]
+    },
+    {
+        question: "Qual o nome do Sensei do time 7",
+        answers: [
+            {text: "Kakashi Sarutobi", correct: false},
+            {text: "Kakashi Uchiha", correct: false},
+            {text: "Kakashi Hanake ", correct: false},
+            {text: "Kakashi Hatake", correct: true},
+        ]
+    },
+    {
+        question: "Quais são as cinco principais transformações naturais de Chakra? ",
+        answers: [
+            {text: "Fogo, Água, Relampago, Vento e Pedra", correct: false},
+            {text: "Fogo, Água, Relampago, Gelo e Terra", correct: false},
+            {text: "Fogo, Água, Relampago, Vento e Terra", correct: true},
+            {text: "Fogo, Água, Trovão, Vento e Terra", correct: false},
+        ]
+    },
+    {
+        question: "Quais os nomes dos companheiros de time do Naruto",
+        answers: [
+            {text: "Sasuke Haruno e Sakura Uchiha", correct: false},
+            {text: "Sasuke Uchiha e Sakura Haruno", correct: true},
+            {text: "Sasuke Uchiha e Ino Yamanaka", correct: false},
+            {text: "Sakura Haruno e Ino Yamanaka", correct: false},
         ]
     },
 ]
