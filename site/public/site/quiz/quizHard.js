@@ -117,7 +117,16 @@ function Voltar(){
 
 
 
+function validarSessaoHard() {
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
 
+
+    if (email === undefined && nome === undefined) {
+        return window.location = "../login.html"; 
+    } 
+    return window.location = "./quiz/quizHard.html"; 
+}
 
 
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
+    <link rel="stylesheet" href="../css/stylehome2.css">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../site/js/header.js"></script>
 </head>
@@ -13,25 +14,25 @@
         <div class="div_header">
             <a href="../site/index.html">Home</a>
         </div>
-       
-        
+        <div>
+            Usuario
+        </div>
         <div class="menu-container">
-            <button class="menu-btn" id="menuBtn">☰</button>
-            <nav class="menu-options" id="menuOptions">
+            <button class="menu-btn" onclick="AbrirOpcoes()">☰</button>
+            <div class="menu-options" id="menu">
+                <a href="../site/login.html">Login</a>
                 <a href="../site/sobremim.html">Sobre Mim</a>
                 <a href="../site/historia.html">Historia Anime</a>
                 <a href="../site/time7.html">Conheça o time 7</a>
                 <a href="../site/onu.html">Onu</a>
-                <a href="./quiz/quiz.html">Quiz</a>
-                <a href="./quiz/quizMedio.html">Quiz Médio</a>
-                <a href="./quiz/quiz.html">Quiz Dificil</a>
+                <a href="../site/quiz/quiz.html">Quiz</a>
+                <a href="../site/quiz/quizMedio.html">Quiz Médio</a>
+                <a href="../site/quiz/quizHard.html">Quiz Dificil</a>
                 <a href="../dashboard/dash.html">Metricas Usuarios</a>
-            </nav>
+                <a href="#" onclick="SairDaSecao()">Sair</a>
+            </div>
         </div>
 
-        <div class="div_header">
-            <a href="../site/login.html">Login/Cadastro</a>
-        </div>
     </header>
 
 
@@ -86,3 +87,16 @@
     </footer>
 </body>
 </html>
+
+<script>
+    function validarSessao() {
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome = sessionStorage.NOME_USUARIO;
+
+
+    if (email === undefined && nome === undefined ) {
+        return window.location = "../index.html"; 
+    } 
+    return window.location = "./historia.html"; 
+}
+</script>
