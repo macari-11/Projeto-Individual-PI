@@ -33,6 +33,23 @@
                                 <input type="text" id="senha_input" placeholder="Sua senha" required>
                                 <input type="text" id="confirmacao_senha_input" placeholder="Confirme sua senha" required>
                                 <button onclick="cadastrar()">Cadastrar-se</button>
+                                <div>
+                                  <Span>Personagem Preferido</Span>
+                                <select name="" id="select_preferido">
+                                  <option value="Naruto Uzumaki">Naruto Uzumaki</option>
+                                  <option value="Sasuke Uchiha">Sasuke Uchiha</option>
+                                  <option value="Sakura Haruno">Sakura Haruno</option>
+                                  <option value="Kakashi Hatake">Kakashi Hatake</option>
+                                  <option value="Minato Namikaze">Minato Namikaze</option>
+                                  <option value="Itachi Uchiha">Itachi Uchiha</option>
+                                  <option value="Shisui Uchiha">Shisui Uchiha</option>
+                                  <option value="Madara Uchiha">Madara Uchiha</option>
+                                  <option value="Shikamaru Nara">Shikamaru Nara</option>
+                                  <option value="Gaara">Gaara</option>
+                                </div>
+                                
+            
+                                </select>
                         </div>
                         <div class="CadastroBaixo">
                             <a href="">CADASTRE-SE AGORA</a>
@@ -47,17 +64,14 @@
 </body>
 <script>
     function cadastrar() {
-    // aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
+    
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    // var preferidoVar = select_preferido.value;
+    var preferidoVar = select_preferido.value;
    
-    // Verificando se há algum campo em branco
+    
     if (
       nomeVar == "" ||
       emailVar == "" ||
@@ -84,9 +98,8 @@
       body: JSON.stringify({
         nomeServer: nomeVar,
           emailServer: emailVar,
-          senhaServer: senhaVar
-        //   ,
-        //   preferidoServer:  preferidoVar
+          senhaServer: senhaVar,
+          preferidoServer:  preferidoVar
       }),
     })
       .then(function (resposta) {
