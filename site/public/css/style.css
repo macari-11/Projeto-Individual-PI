@@ -1,7 +1,8 @@
-body{
+* {
     margin: 0;
     padding: 0;
-    background-color: white;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 header {
     display: flex;
@@ -131,17 +132,99 @@ header a:hover {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300vh;
+    height: 200vh;
     background-image: url(../assets/fundopretobranco.webp);
 }
 .telaClassico{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 90vh;
-    background-image: url(../assets/);
+    height: 120vh;
+}
+.telaClassicoCima{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.telaShippudenCima{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.telaClassicoBaixo{
+    display: flex;
+    align-items: space;
+    justify-content: space-around;
+    height: 30%;
+    width: 100%;
+}
+.telaShippudenBaixo{
+    display: flex;
+    align-items: space;
+    justify-content: space-around;
+    height: 30%;
+    width: 100%;
+}
+.imagemShippuden1{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/shippuden1.png);
+    background-size: cover;
+    border: 2px solid black;
+}
+.imagemShippuden2{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/shippuden2.jpg);
+    background-size: cover;
+    border: 2px solid black;
+    
+}
+.imagemShippuden3{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/shippuden3.jpg);
+    background-size: cover;
+    border: 2px solid black;
+}
+.imagemShippuden4{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/shippuden4.jpg);
+    background-size: cover;
+    border: 2px solid black;
+}
+.imagemClassico1{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/Classico1.jpg);
+    background-size: cover;
+    border: 2px solid black;
+}
+.imagemClassico2{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/classico2.webp);
+    background-size: cover;
+    border: 2px solid black;
+}
+.imagemClassico3{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/classico3.jpg);
+    background-size: cover;
+    border: 2px solid black;
+}
+.imagemClassico4{
+    width: 20%;
+    height: 100%;
+    background-image: url(../assets/classico4.webp);
+    background-size: cover;
+    border: 2px solid black;
 }
 .telaClassicoEsquerda{
     display: flex;
@@ -154,14 +237,14 @@ header a:hover {
 }
 .logoClassico{
     width: 45%;
-    height: 25%;
+    height: 20%;
     background-image: url(../assets/logoNaruto.webp);
     background-size: contain;
     background-repeat: no-repeat;
 }
 .fotoNarutoClassico{
     width: 50%;
-    height: 75%;
+    height:65%;
     background-image: url(../assets/NarutoRasenganClassico.webp);
     background-size: contain;
     background-repeat: no-repeat;
@@ -173,18 +256,16 @@ header a:hover {
     width: 50%;
     height: 90%;
     font-size:xx-large;
-    /* background-image: url(../assets/historiaClassico.webp); */
-    background-size:contain;
-    background-repeat: no-repeat;
+
 }
 
 .telaShippuden{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 90vh;
+    height: 120vh;
 }
 .telaShippudenEsquerda{
     display: flex;
@@ -215,9 +296,6 @@ header a:hover {
     width: 50%;
     height: 90%;
     font-size:xx-large;
-    /* background-image: url(../assets/historiaShippuden.webp); */
-    background-size:contain;
-    background-repeat: no-repeat;
 }
 .sessaoPersonagemNaruto{
     background-image: url(../assets/NarutoFundo90.jpg);
@@ -676,7 +754,15 @@ header a:hover {
     border-radius: 30px;
 }
 #sobreImagem{
-    background-image: url(../assets/fundoBecoKonoha.jpg);
+    background-image: url(../assets/Sobre\,Nós.jpg);
+    background-size: cover;
+    height: 75%;
+    width: 30%;
+    background-color: #949494;
+    border: 2px solid black;
+}
+#sobreImagem2{
+    background-image: url(../assets/Sobre\,Eu.jpg);
     background-size: cover;
     height: 75%;
     width: 30%;
